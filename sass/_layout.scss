@@ -1,0 +1,90 @@
+.container{
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--grey-light-2);
+    box-shadow: var(--box-shadow-dark);
+
+    min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest){
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.header{
+    height: 7rem;
+    background-color: white;
+    font-size: 1.5rem;
+    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+
+    @media only screen and (max-width: $bp-tablet){
+        flex-direction: column;
+    }
+}
+
+.sidebar{
+    background-color: var(--grey-dark-1);
+
+    flex: 0 0 18%; // grow, shrink and basis.
+
+    display: flex;
+    flex-direction: column; //main axis now. Usually the main axis is from left ro right, but i've changed it to fit my needs.
+    
+    justify-content: space-between;
+}
+
+.hotel-view{
+    background-color: white;
+    
+    flex: 1; //grow
+}
+
+.detail{
+    display: flex;
+    padding: 4.5rem;
+    font-size: 1.4rem;
+    background-color: var(--grey-light-1);
+    border-bottom: var(--border-gray);
+
+    @media only screen and (max-width: $bp-phone-small){
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+.description{
+    background-color: white;
+    box-shadow: var(--box-shadow-dark2);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-phone-small){
+        margin-right: auto;
+    }
+}
+
+.user-reviews{
+    flex: 1; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-phone-small){
+        width: 50%;
+    }    
+}
+
